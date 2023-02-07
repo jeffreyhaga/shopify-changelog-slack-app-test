@@ -1,3 +1,5 @@
+//This is code for a slackbot that checks when Shopify's changelog is updated
+
 const axios = require("axios");
 const crypto = require("crypto");
 const https = require("https");
