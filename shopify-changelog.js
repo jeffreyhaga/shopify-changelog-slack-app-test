@@ -4,9 +4,9 @@ const axios = require("axios");
 const crypto = require("crypto");
 const https = require("https");
 
-const SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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";
+const SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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";
 const WEB_PAGE_URL = "https://changelog.shopify.com/";
-const CHECK_INTERVAL_MINUTES = 10;
+const CHECK_INTERVAL_MINUTES = 1;
 
 let previousHash = null;
 
