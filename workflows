@@ -1,0 +1,22 @@
+name: Check for web page updates
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+env:
+  MY_SECRET_TOKEN: ${{ secrets.MY_SECRET_TOKEN }}
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run script
+      uses: actions/checkout@v2
+      with:
+        ref: main
+      env:
+        MY_SECRET_TOKEN: ${{ env.MY_SECRET_TOKEN }}
+      run: |
+        node shopify-changelog.js
